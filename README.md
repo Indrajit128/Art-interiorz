@@ -39,3 +39,5 @@ http://localhost:4173/
 - Added a workspace-level `start` script for direct startup.
 - Added `dev:artz-interior` to launch the Vite app on port `4173`.
 - Updated client and project counts to `600+` clients and `650+` projects.
+
+# Art-interiorz
