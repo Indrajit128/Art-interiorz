@@ -5,7 +5,7 @@
   
    "scripts": {
     "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
-    "build": "pnpm run typecheck && pnpm --dir artifacts/artz-interior run build && node -e \"fs.rmSync('public', {recursive: true, force: true}); fs.cpSync('artifacts/artz-interior/dist', 'public', {recursive: true})\"",
+    "build": "pnpm run typecheck && pnpm --dir artifacts/artz-interior run build && node -e \"fs.rmSync('public', {recursive: true, force: true}); fs.cpSync('artifacts/artz-interior/dist', 'public', {recursive: true}); fs.rmSync('dist', {recursive: true, force: true}); fs.cpSync('artifacts/artz-interior/dist', 'dist', {recursive: true})\"",
     "dev:artz-interior": "pnpm --dir artifacts/artz-interior dev --host 0.0.0.0 --port 4173",
     "start": "pnpm run dev:artz-interior",
     "typecheck:libs": "tsc --build",
